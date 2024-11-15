@@ -1,0 +1,28 @@
+﻿@model UI_Layer.Models.UsersEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+<h1 class="Alert alert-success">Profil Bilgileri Güncelleme Sayfası</h1>
+
+<form method="post">
+    <label>Adınız</label>
+    <input type="text" asp-for="Name" value="" class="form-control" />
+    <br />
+    <label>Soyadınız</label>
+    <input type="text" asp-for="SurName" value="" class="form-control" />
+    <br />
+    <label>Email</label>
+    <input type="text" asp-for="Mail" value="" class="form-control" />
+    <br />
+   @*  <label>Şifreniz</label>
+    <input type="text" asp-for="password" value="" class="form-control" />
+    <br />
+    <label>Şifre Tekrar</label>
+    <input type="text" asp-for="ConfirmPassword" value="" class="form-control" /> *@
+    <br />
+    <button class="btn btn-success">Bilgileri Güncelle</button>
+    <br />
+ </form>
+

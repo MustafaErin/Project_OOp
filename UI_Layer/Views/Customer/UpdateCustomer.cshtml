@@ -1,0 +1,31 @@
+﻿@model Entity_Layer.Concrate.Customer
+@{
+    ViewData["Title"] = "UpdateCustomer";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+<h1 class="alert alert-success">Müşteri Güncelle</h1>
+
+
+<form method="post" class="form-control">
+
+
+    @Html.HiddenFor(x => x.CustomerId, new { @class = "form-control" })
+    <br />
+    <label>Müşteri adı</label>
+    <br />
+    @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Şehri</label>
+    <br />
+    @Html.TextBoxFor(x => x.CustomerCity, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Mesleği</label>
+    <br />
+    @Html.DropDownListFor(x => x.JoobId, (List<SelectListItem>)@ViewBag.v, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-success">Müşteriyi Güncelle</button>
+
+</form>
+
+

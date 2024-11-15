@@ -1,0 +1,30 @@
+﻿@using Entity_Layer.Concrate
+@model List<Joop>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+
+<h1 class="alert alert-success">Meslek Listesi</h1>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Joop Id</th>
+        <th>Joop Name</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.JoobId</td>
+            <td>@item.JoobName</td>
+            <td><a href="/Joop/DeleteJoop/@item.JoobId" class="btn btn-outline-danger">Sil</a> </td>
+            <td><a href="/Joop/UpdateJoop/@item.JoobId" class="btn btn-outline-warning">Güncelle</a> </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Joop/AddJoop/" class="btn btn-success">Yeni Meslek Ekle</a>

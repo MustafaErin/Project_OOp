@@ -1,0 +1,31 @@
+﻿@using Entity_Layer.Concrate
+@model Product
+
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+<h1 class="alert alert-success">Yeni Ürün Girişi</h1>
+
+<form method="post" class="form-control">
+
+    <label>Ürün Adı</label>
+    <br />
+    @Html.TextBoxFor(x=>x.ProductName,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.ProductName)
+    <br />
+    <label>Ürün Fiyatı</label>
+    <br />
+    @Html.TextBoxFor(x => x.ProductPrice, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ProductPrice)
+    <br />
+    <label>Ürün Stok Adeti</label>
+    <br />
+    @Html.TextBoxFor(x => x.ProductStock, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ProductStock)
+    <br />
+    <button class="btn btn-success">Ürünü Ekle</button>
+
+</form>
+

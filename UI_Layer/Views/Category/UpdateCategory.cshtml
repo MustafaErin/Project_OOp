@@ -1,0 +1,27 @@
+﻿@model Entity_Layer.Concrate.Category
+
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+
+<h1 class="alert alert-success">Kategori Güncelleme</h1>
+
+
+<form method="post" class="form-control">
+
+
+    @Html.HiddenFor(x => x.CategoryId, new { @class = "form-control" })
+    <br />
+    <label>Kategori adı</label>
+    <br />
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kategoriyi Güncelle</button>
+
+</form>
+
+
+
+

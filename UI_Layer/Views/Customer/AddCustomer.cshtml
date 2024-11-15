@@ -1,0 +1,27 @@
+﻿@model Entity_Layer.Concrate.Customer
+@{
+    ViewData["Title"] = "AddCustomer";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+<h1 class="alert alert-success">Yeni Müşteri Girişi</h1>
+
+<form method="post" class="form-control">
+
+    <label>Müşteri Adı</label>
+    <br />
+    @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CustomerName)
+    <br />
+    <label>Müşteri Şehri</label>
+    <br />
+    @Html.TextBoxFor(x => x.CustomerCity, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CustomerCity)
+    <br />
+    <label>Müşteri Mesleği</label>
+    <br />
+    @Html.DropDownListFor(x => x.JoobId, (List<SelectListItem>)@ViewBag.v, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-success">Müşteriyi Ekle</button>
+
+</form>

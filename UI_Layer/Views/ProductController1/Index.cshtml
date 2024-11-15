@@ -1,0 +1,33 @@
+﻿@using Entity_Layer.Concrate
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+<h1 class="alert alert-success">Ürünler</h1>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Stock</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductId</td>
+            <td>@item.ProductName</td>
+            <td>@item.ProductPrice</td>
+            <td>@item.ProductStock</td>
+            <td><a href="/ProductController1/DeleteProduct/@item.ProductId" class="btn btn-outline-danger">Sil</a> </td>
+            <td><a href="/ProductController1/UpdateProduct/@item.ProductId" class="btn btn-outline-warning">Güncelle</a> </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/ProductController1/AddProduct/" class="btn btn-success">Yeni Ürün Ekle</a>

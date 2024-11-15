@@ -1,0 +1,17 @@
+﻿@model Entity_Layer.Concrate.Category
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+<h1 class="alert alert-success">Yeni Kategori Girişi</h1>
+
+<form method="post" class="form-control">
+
+    <label>Kategori Adı</label>
+    <br />
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kategoriyi Ekle</button>
+
+</form>

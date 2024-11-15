@@ -1,0 +1,22 @@
+﻿@model Entity_Layer.Concrate.Joop
+@{
+    ViewData["Title"] = "UpdateJoop";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+<h1 class="alert alert-success">Meslek Güncelleme Sayfası</h1>
+
+
+<form method="post" class="form-control">
+
+
+    @Html.HiddenFor(x => x.JoobId, new { @class = "form-control" })
+    <br />
+    <label>Meslek adı</label>
+    <br />
+    @Html.TextBoxFor(x => x.JoobName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Mesleği Güncelle</button>
+
+</form>
+

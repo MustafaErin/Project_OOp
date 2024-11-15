@@ -1,0 +1,21 @@
+﻿@using Entity_Layer.Concrate
+@model Joop
+@{
+    ViewData["Title"] = "AddJoop";
+    Layout = "~/Views/Shared/_OOPLayout.cshtml";
+}
+
+
+<h1 class="alert alert-success">Yeni Meslek Girişi</h1>
+
+<form method="post" class="form-control">
+
+    <label>Meslek Adı</label>
+    <br />
+    @Html.TextBoxFor(x => x.JoobName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Meslek Ekle</button>
+
+</form>
+
+
